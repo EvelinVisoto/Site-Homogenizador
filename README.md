@@ -19,6 +19,6 @@ O Homogeneizador de Sangue foi desenvolvido para automatizar a mistura de amostr
 ## Autor
 Desenvolvido por **Evelin Visoto & Isabelly Pacheco** - 2023
 
-📌 **GitHub Repository:** [Site Homogenizador](https://github.com/EvelinVisoto/Site-Homogenizador)
+📌 ** Repositório GitHub:** [Homogenizador de Sangue](https://github.com/EvelinVisoto/Site-Homogenizador)
 
 _Projeto desenvolvido como parte da Feira Técnica do segundo ano do curso Técnico em Informática do Colégio Univap._
