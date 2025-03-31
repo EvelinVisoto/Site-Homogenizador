@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Define a cor do texto como branca */
+}
+header {
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin: 0; /* Remove as margens padrão do h1 */
+    color: white; /* Define a cor do texto como branca */
+}
+
+
+\\barra
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c4402f;
+}
+
+\\ logo
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white; /* Define a cor do texto da logo como branca */
+}
+
+/* Adicione a classe .description ao elemento de descrição sob a imagem */
+.description {
+    color: white; /* Define a cor do texto como branca */
+    text-shadow: 2px 2px 4px black; /* Adiciona sombra ao texto para melhor legibilidade */
+}
+
+
+.content-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #dedede;
+    border-radius: 5px;
+    text-align: justify;
+}
+
+.section {
+    padding: 20px;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.centered-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.slideshow {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.slideshow img {
+    display: none;
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
+}
+
+
+.table-container {
+    float: left;
+    margin-right: 20px;
+}
+
+\\carrosel 
+
+
+.carousel-container {
+    width: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: inline-block;
+    transition: transform 0.5s ease;
+
+}
+
+.carousel-slide img {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+/* Animação do carrossel */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Estilo dos botões de navegação (opcional) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.slide-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 65px;
+}
+
+.slide-text h2 {
+    font-size: 26px;
+}
+
+.slide-text p {
+    font-size: 18px;
+}
+
+/* Adicionando a imagem como fundo do texto */
+.slide1 {
+    background-image: url("motor.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.slide2 {
+    background-image: url("arduino.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.slide3 {
+    background-image: url("trasformador.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.slide4 {
+    background-color: #d6d6d6;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide5 {
+    background-image: url("treco.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+\\tabela detalhamento
+
+.table-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+table {
+    border-collapse: collapse;
+    width: 80%; /* Largura da tabela (ajuste conforme necessário) */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+.my-list {
+    list-style:none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    text-align: center;
+}
+
+.my-list li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ffffff;
+}

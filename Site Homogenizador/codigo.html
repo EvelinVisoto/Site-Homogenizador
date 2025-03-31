@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <title>Homogenizador</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="LOGO.png" alt="Logo do Homogenizador" class="logo">
+            <script src="script.js" defer></script>
+            <h1>Homogenizador de Sangue</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detalhamento.html">Componentes</a></li>
+                <li><a href="participantes.html">Participantes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="codigo" class="section">
+        <h2>Código em C++</h2>
+        <div class="code-container">
+            <code>
+                bool est=0;                            
+                #define pinest 8
+                #define ledl 6
+                #define ledd 10
+                #define lede 11 
+                #define pwm 9
+                //Definição de nomes para cada pino, facilita a programação
+        
+                void setup()
+                {                       
+                    pinMode(pinest,INPUT);
+                    pinMode(ledl,OUTPUT);
+                    pinMode(ledd,OUTPUT);
+                    pinMode(lede,OUTPUT);
+                    //Definição do modo de funcionamento de cada pino    
+                }
+
+                void loop()
+                {  
+                    est=digitalRead(pinest);
+                    //A variavel "est" representa a leitura de tensão do interruptor
+
+                    if(est==1){
+                        analogWrite (pwm,200); //Defini uma velocidade para o motor, menor do que o máximo para preservá-lo 
+                        digitalWrite(ledl,1); //Aciona o LED verde
+                        digitalWrite(ledd,0);
+                        digitalWrite(lede,0);
+
+                        //Condição caso o botão esteja acionado, liga o motor   
+                    }else if(est==0){
+                        analogWrite(pwm,0);
+                        digitalWrite(ledl,0);
+                        digitalWrite(ledd,1); // Aciona o LED vermelho
+                        digitalWrite(lede,0);
+
+                        //Condição caso o botão esteja desligado, desligando o motor    
+                    }else{
+                        erro();
+                        //Função que pisca o LED laranja caso haja algum erro
+                    }
+                }
+
+                void erro()
+                {
+                    analogWrite(pwm,0);
+                    digitalWrite(ledl,0);
+                    digitalWrite(ledd,0);
+                    digitalWrite(lede,1);
+                    delay(250);
+                    digitalWrite(lede,0);
+                    delay(250);
+                    //Função que pisca o LED
+                }
+            </code>
+        </div>
+    </section>
+    <br></br>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Homogenizador de Sangue.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
